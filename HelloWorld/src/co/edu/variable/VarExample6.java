@@ -20,6 +20,6 @@ public class VarExample6 {
 		}
 		
 		
-	}
+	} // 다른지 확인
 
 }
