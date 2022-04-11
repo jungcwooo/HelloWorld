@@ -24,7 +24,7 @@ public class Basket {
 		System.out.println(fruit+"개의 과일을 담기 위해서는 큰바구니(10개)"
 				+ " "+bigbasket+"개와 작은바구니(5개) "
 				+basket+"개가 필요하다.");
-		
+		//ㅋㅋ
 
 	}
 
