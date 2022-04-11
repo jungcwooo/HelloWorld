@@ -23,9 +23,9 @@ public class IfExample4 {
 		double avg = ((num1+num2+num3)/3.0); // num1,num2,num3의 평균 값을 저장하기 위한 변수
 		
 
-		System.out.printf("입력하신 숫자는 %d, %d, %d입니다.%n",num1,num2,num3);
-		System.out.println("세 숫자의 합은 "+sum+"이고 평균은 "+avg+"입니다.");
-		System.out.printf("세 숫자의 합은 %d이고 평균은 %.2f입니다.",sum,avg);
+		System.out.printf("입력하신 정수는 %d, %d, %d입니다.\n",num1,num2,num3);
+		System.out.println("세 정수의 합은 "+sum+"이고 평균은 "+avg+"입니다.");
+		System.out.printf("세 정수의 합은 %d이고 평균은 %.2f입니다.",sum,avg);
 
 	}
 
