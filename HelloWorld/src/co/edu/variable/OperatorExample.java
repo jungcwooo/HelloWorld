@@ -8,7 +8,8 @@ public class OperatorExample {
 		
 		Scanner scn = new Scanner(System.in);
 		int x = scn.nextInt();
-		
+		System.out.println("입력하신 금액 "+x+"원 입니다.");
+		if(x < 0 ) {System.out.println("잘못된 금액입니다");}
 		
 //		int result	= 6 / 4;
 //		int result2 = 6 % 4;
@@ -39,7 +40,8 @@ public class OperatorExample {
 		int ship = na / 10;
 			na = na % 10;
 	
-			System.out.println("오만원짜리 "+oman +"개, 만원짜리 "+ man +"개, 오천원짜리 "+ ochun+"개, 천원짜리 "+ chun +"개, 오백원짜리 "+ obac +"개, 백원짜리 "+bac+"개, 오십원짜리 " + oship+"개, 십원짜리 "
+			System.out.println("오만원짜리 "+oman +"개, 만원짜리 "+ man +"개, 오천원짜리 "+ ochun+"개,"
+					+ " 천원짜리 "+ chun +"개, 오백원짜리 "+ obac +"개, 백원짜리 "+bac+"개, 오십원짜리 " + oship+"개, 십원짜리 "
 					+ ship+ "개입니다.");
 		}
 	}
