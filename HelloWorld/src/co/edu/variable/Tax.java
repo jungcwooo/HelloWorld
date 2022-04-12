@@ -22,7 +22,7 @@ public class Tax {
 		
 		change = money - product;
 		
-		System.out.println("선택하신 제품의 가격은 상품가격 " + one+"원과 부가세 "+tax+"원을 합한 가격입다.");
+		System.out.println("선택하신 제품의 가격은 상품가격 " + one+"원과 부가세 "+tax+"원을 합한 가격입니다.");
 		System.out.println("지불하실 금액은 " + product+"원으로 거스름돈 "+change+"원입니다.");
 		
 		//완료
