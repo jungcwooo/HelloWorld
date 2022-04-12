@@ -9,11 +9,27 @@ public class Game {
 		System.out.println("가위~ 바위~ 보!");
 		System.out.println("1 : 가위, 2 : 바위, 3 : 보");
 		
+		String ss = "";
+		String dd = "";
+		
 		int my = scn.nextInt();
 		int na = (int)(3 * (Math.random())+1);
-		System.out.println("내가 낸 것 :"+ my);
-		System.out.println("상대가 낸 것 :"+ na);
 		
+		if(my==1) {ss="가위";}
+		else if(my==2) {ss="바위";}
+		else if(my==3) {ss="보";}
+		
+		if(na==1) {dd="가위";}
+		else if(na==2) {dd="바위";}
+		else if(na==3) {dd="보";}
+		
+		
+		
+		System.out.println("내가 낸 것 : "+ ss);
+		System.out.println("상대가 낸 것 : "+ dd);
+	
+			
+			
 		if(my>4) {
 			System.out.println("잘못 입력하셨습니다.");
 		} else if(my==1 && na ==3) {
