@@ -6,9 +6,9 @@ public class Dice {
 
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
-		int my = scn.nextInt();
-
 		System.out.println("숫자를 입력해주세요 ( 1 ~ 6 )");
+
+		int my = scn.nextInt();
 		int dice = (int) (6 * (Math.random()) + 1);
 
 		if (my == dice) {
