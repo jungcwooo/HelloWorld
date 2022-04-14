@@ -1,5 +1,8 @@
 package co.edu;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Board {
 
 	private int boardNo;
@@ -73,6 +76,15 @@ public class Board {
 		this.boardNo, this.title, this.content, this.writer, this.searchCnt );
 	}
 	
+	public void getSearchInfo() {
+		
+		System.out.printf("%6d %10s %-20s %-10s %3d\n",
+				this.boardNo, this.title, this.content, this.writer, this.searchCnt );
+		
+		
+	}	
+	
+	
 	public void getDetaolInfo() {
 		//게시글번호             작성자
 		//제목                   조회수
@@ -84,6 +96,18 @@ public class Board {
 					"=======================================\n";
 		System.out.printf(info,this.boardNo,this.writer,this.title,this.searchCnt,this.content );
 		
+	}
+
+
+	public void removeAll(List<String> asList) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public boolean isEmpty() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 	
 }
