@@ -8,26 +8,39 @@ public class BoardExe {
 		Scanner scn = new Scanner(System.in);
 		BoardList boardList = new BoardList();
 		boardList.init(5); // 배열의 크기 지정.
+		
+		int cnt = 1;
 
 		while (true) {
 			
 			System.out.println("1. 추가 | 2. 수정 | 3. 목록 | 4. 삭제 | 5. 글번호 조회 | 6. 작성자조회 | 9. 종료");
 			System.out.print("선택 => ");
-			int menu = Integer.parseInt(scn.nextLine());
+			int menu = -1;
+			try {
+				menu = Integer.parseInt(scn.nextLine());
+			} catch (Exception e) {
+				System.out.println("=======================");
+				System.out.println("잘못된 입력이 있습니다.");
+				System.out.println("숫자만 입력해주세요.");
+				System.out.println("=======================");
+			}
 
 			if (menu == 1) {
-				System.out.print("게시물 번호를 입력하세요 => ");
-				int bNo = Integer.parseInt(scn.nextLine());
+//				System.out.print("게시물 번호를 입력하세요 => ");
+//				int bNo = Integer.parseInt(scn.nextLine());
 				System.out.print("제목을 입력하세요 =>");
 				String bTitle = scn.nextLine();
 				System.out.print("내용을 입력하세요 =>");
 				String bContent = scn.nextLine();
 				System.out.print("작성자를 입력하세요 =>");
 				String bWriter = scn.nextLine();
-				Board newBod = new Board(bNo, bTitle, bContent, bWriter);
+				Board newBod = new Board(cnt, bTitle, bContent, bWriter);
+				
 				int chk = boardList.addBoard(newBod);
+				
 
 				if (chk == 0) {
+					cnt++;
 					System.out.println("완료되었습니다.");
 				} else if (chk == -1) {
 					System.out.println("저장 공간이 부족합니다.");
@@ -66,7 +79,7 @@ public class BoardExe {
 				int bNo = Integer.parseInt(scn.nextLine());
 				System.out.println("정말로 삭제하시겠습니까?(Y/N)");
 				remove = scn.nextLine();
-				if (remove.equalsIgnoreCase(remove)) { // y,n을 구분하는 조건문
+				if (remove.equalsIgnoreCase("y")) { // y,n을 구분하는 조건문
 					boolean chk2 = boardList.removeBoard(bNo);
 					if (chk2) {
 						System.out.println("완료되었습니다.");
@@ -86,14 +99,19 @@ public class BoardExe {
 				} else {
 					getBoard.getDetaolInfo();
 				}
+				// 작성자 조회
 			} else if (menu == 6) {
-				System.out.println("조회하고 싶은 작성자를 입력하세요 => ");
+				System.out.println("조회하고 싶은 작성자명을 입력하세요 => ");
 				String bWr = scn.nextLine();
-				boardList.searchWrBoard(bWr);
-				if (getBoard == null) {
-					System.out.println("조회결과가 없습니다.");
-				} else {
-					getBoard.getInfo();
+				Board[] writerList = boardList.searchWrBoard(bWr);
+				System.out.println("게시글번호   제목       내용            작성자    조회수");
+				System.out.println("================================================================");
+				
+				for(Board board : writerList) {
+					if(board != null) {
+						board.getInfo();
+					}
+					
 				}
 			
 				

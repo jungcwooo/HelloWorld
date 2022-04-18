@@ -48,14 +48,22 @@ public class BoardList {
 		}
 		return check;
 	}
-	//작성자 조회
+
+	// 작성자 조회
 	public Board[] searchWrBoard(String bWr) {
-		for (int i = 0; i < boards.length; i++) {
-			if (boards[i].getWriter().equals(bWr)) {
-				return boards;
+		Board[] sBoards = new Board[5];
+		for (int i = 0; i < boards.length; i++) { // 찾을 대상배열
+			if (boards[i] != null && boards[i].getWriter().equals(bWr)) {
+				for (int j = 0; j < sBoards.length; j++) { //이름 조회해서 반환하는 배열
+					if (sBoards[j] == null) {
+						sBoards[j] = boards[j];
+						break;
+					}
+				}
+
 			}
 		}
-		return null;
+		return boards;
 	}
 
 	// 한건 조회 : 게시글번호

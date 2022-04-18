@@ -73,6 +73,11 @@ public class Board {
 		this.boardNo, this.title, this.content, this.writer, this.searchCnt );
 	}
 	
+	public void getSearchInfo() {
+		System.out.printf("%6d %10s %-20s %-10s %3d\n",
+		this.boardNo, this.title, this.content, this.writer, this.searchCnt );
+	}
+	
 	public void getDetaolInfo() {
 		//게시글번호             작성자
 		//제목                   조회수
