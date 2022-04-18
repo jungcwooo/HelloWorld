@@ -1,5 +1,6 @@
 package co.edu;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class BoardExe {
@@ -7,6 +8,7 @@ public class BoardExe {
 		// BoardList에 정의 해놓은 필드와메소드를 활용해서 기능.
 		Scanner scn = new Scanner(System.in);
 		BoardList boardList = new BoardList();
+		Board bbb = new Board(0, null, null, null);
 		boardList.init(5); // 배열의 크기 지정.
 		
 		int cnt = 1;
@@ -99,10 +101,15 @@ public class BoardExe {
 				} else {
 					getBoard.getDetaolInfo();
 				}
+<<<<<<< HEAD
 				// 작성자 조회
+=======
+				
+>>>>>>> branch 'master' of https://github.com/jungcwooo/HelloWorld.git
 			} else if (menu == 6) {
 				System.out.println("조회하고 싶은 작성자명을 입력하세요 => ");
 				String bWr = scn.nextLine();
+<<<<<<< HEAD
 				Board[] writerList = boardList.searchWrBoard(bWr);
 				System.out.println("게시글번호   제목       내용            작성자    조회수");
 				System.out.println("================================================================");
@@ -113,6 +120,23 @@ public class BoardExe {
 					}
 					
 				}
+=======
+				System.out.println("게시글번호   제목       내용            작성자    조회수");
+				System.out.println("================================================================");
+				
+				boardList.searchWrBoard(bWr);
+//				if (getBoard == null) {
+//					System.out.println("조회결과가 없습니다.");
+//				} else {
+//					
+//					for (int i = 0; i < args.length; i++) {
+//						
+//						getBoard[i].removeAll(Arrays.asList("", null));
+//						getBoard[i].getSearchInfo();
+//					}
+//					
+//				}
+>>>>>>> branch 'master' of https://github.com/jungcwooo/HelloWorld.git
 			
 				
 						

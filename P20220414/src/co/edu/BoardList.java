@@ -1,10 +1,11 @@
 package co.edu;
 
 public class BoardList {
-	private Board[] boards;
+	private Board[] boards, ddd;
 
 	public void init(int size) {
 		boards = new Board[size];
+		ddd = new Board[size];
 	}
 
 	public int addBoard(Board board) {
@@ -50,6 +51,7 @@ public class BoardList {
 	}
 
 	// 작성자 조회
+<<<<<<< HEAD
 	public Board[] searchWrBoard(String bWr) {
 		Board[] sBoards = new Board[5];
 		for (int i = 0; i < boards.length; i++) { // 찾을 대상배열
@@ -61,9 +63,39 @@ public class BoardList {
 					}
 				}
 
+=======
+	public void searchWrBoard(String bWr) {
+
+		if (bWr == null) {
+			System.out.println("조회결과가 없습니다.");
+		} else {
+
+			for (int i = 0; i < boards.length; i++) {
+				if (boards[i].getWriter().equals(bWr)) {
+					if (!(boards[i] == null || boards[i].isEmpty())) {
+						boards[i].getSearchInfo();
+					}
+				}else {
+					continue;
+				}
+>>>>>>> branch 'master' of https://github.com/jungcwooo/HelloWorld.git
 			}
 		}
+<<<<<<< HEAD
 		return boards;
+=======
+//		for (int i = 0; i < boards.length; i++) {
+//			if (boards[i].getWriter().equals(bWr)) {
+//				
+//				Arrays.deepToString(boards[i]);
+//				
+//			} else {
+//				
+//				
+//			}
+//			
+//		}
+>>>>>>> branch 'master' of https://github.com/jungcwooo/HelloWorld.git
 	}
 
 	// 한건 조회 : 게시글번호
