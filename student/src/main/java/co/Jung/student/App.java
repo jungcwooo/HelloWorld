@@ -22,33 +22,33 @@ public class App
     	for (StudentVO vo : list) {
 			vo.toString();
 		}
-//    	System.out.println("====================================한명조회==========================================");
-//    	StudentVO student = new StudentVO();
-//    	student.setStudentid("pack@daum.net");
-//    	student = dao.selectStudent(student);
-//    	
-//    	student.toString();
+    	System.out.println("====================================한명조회==========================================");
+    	StudentVO student = new StudentVO();
+    	student.setStudentid("pack@daum.net");
+    	student = dao.selectStudent(student);
+    	
+    	student.toString();
 //    	
 //    	System.out.println("=====================================삭제=========================================");
 //    	StudentVO student = new StudentVO();
 //    	student.setStudentid("pack@daum.net");
 //    	student = dao.selectStudent(student);
 //    	
-    	System.out.println("=====================================한명추가=========================================");
-    	
-    	StudentVO vo = new StudentVO();
-    	vo.setStudentid("A@daum.net");
-    	vo.setName("아철우");
-    	vo.setBirthday(Date.valueOf("1995-02-12"));
-    	vo.setMajor("동물과");
-    	vo.setAddress(null);
-    	vo.setTel("010-6668-5511");
-    	
-    	int n = dao.insertStudent(vo);
-    	if(n != 00) {
-    		System.out.println("정상적으로 입력되었습니다.");
-    		
-    	}
+//    	System.out.println("=====================================한명추가=========================================");
+//    	
+//    	StudentVO vo = new StudentVO();
+//    	vo.setStudentid("A@daum.net");
+//    	vo.setName("아철우");
+//    	vo.setBirthday(Date.valueOf("1995-02-12"));
+//    	vo.setMajor("동물과");
+//    	vo.setAddress(null);
+//    	vo.setTel("010-6668-5511");
+//    	
+//    	int n = dao.insertStudent(vo);
+//    	if(n != 00) {
+//    		System.out.println("정상적으로 입력되었습니다.");
+//    		
+//    	}
     	
     }
 }

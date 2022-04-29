@@ -12,11 +12,12 @@ import co.Jung.student.dto.StudentVO;
 import co.Jung.student.service.StudentService;
 
 public class StudentserviceImpl implements StudentService {
-	private Connection conn = DataSource.getConnection(); // connection연결
+	private DataSource dataSource = DataSource.getInstance();
+	private Connection conn = dataSource.getConnection(); // connection연결
 	private PreparedStatement psmt; // sql 명령실행
 	private ResultSet rs; // select 결과 담음
 
-	@Override
+	@Override 
 	public List<StudentVO> selectListStudent() {
 		List<StudentVO> students = new ArrayList<StudentVO>();
 		// 전체 학생 리스트 가져오기
