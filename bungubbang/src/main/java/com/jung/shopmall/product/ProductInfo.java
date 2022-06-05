@@ -1,6 +1,6 @@
 package com.jung.shopmall.product;
 
-public class ProductInfo {
+public class dInfo {
 	
 	private String pName;
 	private int price;
