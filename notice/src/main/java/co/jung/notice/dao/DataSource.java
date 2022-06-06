@@ -43,7 +43,7 @@ public class DataSource {
 			user = properties.getProperty("user");
 			passwd = properties.getProperty("passwd");
 		} catch (Exception e) {
-			// TODO: handle exception
+			e.printStackTrace();
 		}
 
 	}
